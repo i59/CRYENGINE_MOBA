@@ -62,6 +62,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile Server Only|x64'">
     <IntDir>$(PropsFolder)..\..\BinTemp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <OutDir>D:\Dev\Poppermoist\Bin64</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\CryEngine\CryAction;$(SDKFolder)\\;$(SDKFolder)\\speex-1.0.5\include;$(SDKFolder)\\CrispRMF-C++-3.0.0\CryCrispWrapper;$(SDKFolder)\\Steam;..\..\CryMono\MonoDll\Headers;$(SDKFolder)\\VisualLeakDetector\\include</AdditionalIncludeDirectories>
@@ -96,6 +99,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorView.cpp" />
     <ClCompile Include="HUD\UIManager.cpp" />
     <ClCompile Include="EntityClassEx.cpp" />
     <ClCompile Include="GameDll.cpp" />

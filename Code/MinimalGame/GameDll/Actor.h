@@ -155,7 +155,7 @@ public:
 	// ~IActor
 
 	// IGameObjectView
-	virtual void UpdateView(SViewParams &viewParams) {}
+	virtual void UpdateView(SViewParams &viewParams);
 	virtual void PostUpdateView(SViewParams &viewParams) {}
 	// IGameObjectView
 

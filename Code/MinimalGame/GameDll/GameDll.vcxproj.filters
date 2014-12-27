@@ -80,6 +80,9 @@
     <ClCompile Include="Utility\StringUtils.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
+    <ClCompile Include="ActorView.cpp">
+      <Filter>Actor Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameStartup.h">
