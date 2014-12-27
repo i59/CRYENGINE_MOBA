@@ -118,7 +118,8 @@ void CActor::Revive()
 
 	// Disable motion blur
 	// SetMotionBlur is a bit confusing, true means it'll be disabled.
-	static_cast<IEntityRenderProxy *>(pEntity->GetProxy(ENTITY_PROXY_RENDER))->SetMotionBlur(true);
+	if(IEntityRenderProxy *pRenderProxy = static_cast<IEntityRenderProxy *>(pEntity->GetProxy(ENTITY_PROXY_RENDER)))
+		pRenderProxy->SetMotionBlur(true);
 
 	if (gEnv->bServer)
 		GetGameObject()->SetAspectProfile(eEA_Physics, eAP_Alive);
