@@ -28,11 +28,76 @@ public:
 	virtual ~CActor();
 
 	// IActor
+	virtual void SetHealth(float health) {}
+	virtual float GetHealth() const { return PLAYER_MAX_HEALTH; }
+	virtual int	GetHealthAsRoundedPercentage() const { return (int)((GetHealth() / GetMaxHealth()) * 100); }
+	virtual void SetMaxHealth(float maxHealth) {}
+	virtual float GetMaxHealth() const { return PLAYER_MAX_HEALTH; }
+	virtual int	GetArmor() const { return 0; }
+	virtual int	GetMaxArmor() const { return 0; }
+	virtual int	GetTeamId() const { return 0; }
+
+	virtual bool IsFallen() const { return false; }
+	virtual bool IsDead() const { return GetHealth() <= 0; }
+	virtual int	IsGod() { return 0; }
+	virtual void Fall(Vec3 hitPos = Vec3(0,0,0)) {}
+	virtual bool AllowLandingBob() { return false; }
+
+	virtual void PlayAction(const char *action,const char *extension, bool looping=false) {}
+	virtual IAnimationGraphState *GetAnimationGraphState() { return nullptr; }
+	virtual void ResetAnimationState() {}
+
+	virtual void CreateScriptEvent(const char *event,float value,const char *str = NULL) {}
+	virtual bool BecomeAggressiveToAgent(EntityId entityID) { return false; }
+
+	virtual void SetFacialAlertnessLevel(int alertness) {}
+	virtual void RequestFacialExpression(const char* pExpressionName /* = NULL */, f32* sequenceLength /*= NULL*/);
+	virtual void PrecacheFacialExpression(const char* pExpressionName);
+
+	virtual EntityId	GetGrabbedEntityId() const { return 0; }
+
+	virtual void HideAllAttachments(bool isHiding) {}
+
+	virtual void SetIKPos(const char *pLimbName, const Vec3& goalPos, int priority) {}
+
+	virtual void SetViewInVehicle(Quat viewRotation) {}
+	virtual void SetViewRotation( const Quat &rotation ) {}
+	virtual Quat GetViewRotation() const { return IDENTITY; }
+
+	virtual bool IsFriendlyEntity(EntityId entityId, bool bUsingAIIgnorePlayer = true) const { return false; }
+
+	virtual Vec3 GetLocalEyePos() const { return ZERO; }
+
+	virtual void CameraShake(float angle,float shift,float duration,float frequency,Vec3 pos,int ID,const char* source="") {}
+
+	virtual IItem* GetHolsteredItem() const { return nullptr; }
+	virtual void HolsterItem(bool holster, bool playSelect = true, float selectSpeedBias = 1.0f, bool hideLeftHandObject = true) {}
+	virtual IItem* GetCurrentItem(bool includeVehicle=false) const { return nullptr; }
+	virtual bool DropItem(EntityId itemId, float impulseScale=1.0f, bool selectNext=true, bool byDeath=false) { return false; }
+	virtual IInventory *GetInventory() const { return nullptr; }
+	virtual void NotifyCurrentItemChanged(IItem* newItem) {}
+
+	virtual IMovementController * GetMovementController() const { return nullptr; }
+
+	virtual IEntity *LinkToVehicle(EntityId vehicleId) { return nullptr; }
+
+	virtual IEntity* GetLinkedEntity() const { return nullptr; }
+
+	virtual uint8 GetSpectatorMode() const { return 0; }
+
 	virtual void GetMemoryUsage(ICrySizer * s) const;
 
 	virtual void ProcessEvent(SEntityEvent& event);
 	virtual IAnimatedCharacter * GetAnimatedCharacter() { return nullptr; }
 	virtual const IAnimatedCharacter * GetAnimatedCharacter() const { return nullptr; }
+
+	virtual void PlayExactPositioningAnimation( const char* sAnimationName, bool bSignal, const Vec3& vPosition, const Vec3& vDirection, float startWidth, float startArcAngle, float directionTolerance ) {}
+	virtual void CancelExactPositioningAnimation() {}
+	virtual void PlayAnimation( const char* sAnimationName, bool bSignal ) {}
+
+	virtual void EnableTimeDemo( bool bTimeDemo ) {}
+
+	virtual void SwitchDemoModeSpectator(bool activate) {}
 
 	virtual void SetAuthority(bool auth);
 	virtual void Release() { delete this; };
@@ -66,6 +131,11 @@ public:
 
 	virtual void InitLocalPlayer();
 
+	virtual const char* GetActorClassName() const { return "CActor"; }
+	virtual ActorClass GetActorClass() const { return 0; }
+
+	virtual const char* GetEntityClassName() const { return "CActor"; }
+
 	virtual void HandleEvent( const SGameObjectEvent& event );
 	virtual void PostUpdate(float frameTime) {}
 	virtual void PostRemoteSpawn() {};
@@ -73,16 +143,7 @@ public:
 	virtual bool IsThirdPerson() const { return true; };
 	virtual void ToggleThirdPerson(){}
 
-	virtual void SetFacialAlertnessLevel(int alertness) {}
-	virtual void RequestFacialExpression(const char* pExpressionName /* = NULL */, f32* sequenceLength /*= NULL*/);
-	virtual void PrecacheFacialExpression(const char* pExpressionName);
-
-	virtual void NotifyInventoryAmmoChange(IEntityClass* pAmmoClass, int amount) {}
-	virtual EntityId	GetGrabbedEntityId() const { return 0; }
-
-	virtual void HideAllAttachments(bool isHiding) {}
-
-	virtual void SetIKPos(const char *pLimbName, const Vec3& goalPos, int priority) {}
+	virtual IVehicle *GetLinkedVehicle() const { return nullptr; }
 
 	virtual void OnAIProxyEnabled(bool enabled) {};
 	virtual void OnReturnedToPool() {};

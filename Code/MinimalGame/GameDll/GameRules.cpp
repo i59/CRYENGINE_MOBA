@@ -125,7 +125,11 @@ bool CGameRules::OnClientConnect(int channelId, bool isReset)
 		pActorSystem->RemoveActor(pActor->GetEntityId());
 	}
 
-	if (IActor *pActor = pActorSystem->CreateActor(channelId, "Player", "Skier", ZERO, IDENTITY, Vec3(1, 1, 1)))
+	const char *playerName = "Player";
+	// See Actor.cpp, defined in Game.cpp (CGame::RegisterEntities)
+	const char *playerType = "SampleActor";
+
+	if (IActor *pActor = pActorSystem->CreateActor(channelId, playerName, playerType, ZERO, IDENTITY, Vec3(1, 1, 1)))
 	{
 		// Hide spawned actors until the client *enters* the game
 		pActor->GetEntity()->Hide(true);

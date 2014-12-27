@@ -28,6 +28,8 @@
 
 #include "GamePhysicsSettings.h"
 
+#include "Actor.h"
+
 #ifdef USE_CRYMONO
 #include <IMonoScriptSystem.h>
 #endif
@@ -150,7 +152,7 @@ bool CGame::CompleteInit()
 
 void CGame::RegisterEntities()
 {
-	//REGISTER_FACTORY(m_pFramework, "MyActor", CMyActor, false);
+	REGISTER_FACTORY(m_pFramework, "SampleActor", CActor, false);
 
 	//GameRules
 	REGISTER_FACTORY(m_pFramework, "GameRules", CGameRules, false);
