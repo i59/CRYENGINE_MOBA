@@ -151,7 +151,7 @@ void cry_displayMemInHexAndAscii(const char * startEachLineWith, const void * da
 //---------------------------------------------------------------------
 void CCryWatchOutputHandler::DoOutput(const char * text)
 {
-	CryWatch ("%s", text);
+	//CryWatch ("%s", text);
 }
 
 //---------------------------------------------------------------------

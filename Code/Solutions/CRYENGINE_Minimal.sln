@@ -10,7 +10,7 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CryCommon", "..\CryEngine\CryCommon\CryCommon.vcxproj", "{AEB958D4-45CA-478B-BA8E-D0E897CE974B}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution|
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		Performance|Win32 = Performance|Win32
@@ -25,7 +25,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Debug|Win32.ActiveCfg = Debug|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Debug|Win32.Build.0 = Debug|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Debug|x64.ActiveCfg = Debug|x64
@@ -37,7 +36,6 @@ Global
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile Server Only|Win32.ActiveCfg = Profile Server Only|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile Server Only|Win32.Build.0 = Profile Server Only|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile Server Only|x64.ActiveCfg = Profile Server Only|x64
-		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile Server Only|x64.Build.0 = Profile Server Only|x64|
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile|Win32.ActiveCfg = Profile|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile|Win32.Build.0 = Profile|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Profile|x64.ActiveCfg = Profile|x64
@@ -45,7 +43,6 @@ Global
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release Server Only|Win32.ActiveCfg = Release Server Only|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release Server Only|Win32.Build.0 = Release Server Only|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release Server Only|x64.ActiveCfg = Release Server Only|x64
-		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release Server Only|x64.Build.0 = Release Server Only|x64|
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release|Win32.ActiveCfg = Release|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release|Win32.Build.0 = Release|Win32
 		{2652EA4E-BB2C-4DDC-BFD9-89FFC50A4403}.Release|x64.ActiveCfg = Release|x64

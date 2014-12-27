@@ -12,6 +12,11 @@
 *.sdf
 *.props
 *.txt
+*.ilk
+*.ipch
+*.suo
+*.ncrunch*
+*.opensdf
 
 *.py
 
