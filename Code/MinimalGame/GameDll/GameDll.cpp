@@ -25,6 +25,17 @@
 
 #include <CryLibrary.h>
 
+BOOL APIENTRY DllMain( HANDLE hModule, DWORD ul_reason_for_call, LPVOID)
+{	 
+   switch (ul_reason_for_call) 
+   {
+      case DLL_PROCESS_ATTACH:
+		  CGameStartup::SetThisModule((HINSTANCE)hModule);
+		  break;
+   }
+   return TRUE;
+}
+
 extern "C"
 {
 	GAME_API IGame *CreateGame(IGameFramework* pGameFramework)

@@ -59,6 +59,8 @@ public:
 
 	static void AllowAccessibilityShortcutKeys(bool bAllowKeys);
 
+	static void SetThisModule(HINSTANCE hInstance) { m_hThisModule = hInstance; }
+
 private:
 	static void FullScreenCVarChanged( ICVar *pVar );
 	static bool IsModAvailable(const string& modName);
@@ -92,6 +94,8 @@ private:
 	static HWND						m_hWnd;
 
 #ifdef WIN32
+	static HINSTANCE m_hThisModule;
+
 	static HICON				m_hIcon;
 	static HCURSOR				m_hCursor;
 #endif

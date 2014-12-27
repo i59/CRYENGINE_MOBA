@@ -141,6 +141,8 @@ bool CGameStartup::m_fullScreenCVarSetup = false;
 bool CGameStartup::m_bWasFullscreenBeforeAltTab = false;
 
 #ifdef WIN32
+HINSTANCE CGameStartup::m_hThisModule = 0;
+
 HICON CGameStartup::m_hIcon = 0;
 HCURSOR CGameStartup::m_hCursor = 0;
 #endif
@@ -571,8 +573,8 @@ bool CGameStartup::InitWindow(SSystemInitParams &startupParams)
 	wc.cbClsExtra    = 0;
 	wc.cbWndExtra    = 0;
 	wc.hInstance     = GetModuleHandle(0);
-	wc.hIcon = m_hIcon = (HICON)LoadIcon((HINSTANCE)startupParams.hInstance, MAKEINTRESOURCE(IDI_ICON1));
-	wc.hCursor = m_hCursor = (HCURSOR)LoadCursor((HINSTANCE)startupParams.hInstance, MAKEINTRESOURCE(IDC_CURSOR1));
+	wc.hIcon = m_hIcon = (HICON)LoadIcon(m_hThisModule, MAKEINTRESOURCE(IDI_ICON1));
+	wc.hCursor = m_hCursor = (HCURSOR)LoadCursor(m_hThisModule, MAKEINTRESOURCE(IDC_CURSOR1));
 	wc.hbrBackground =(HBRUSH)GetStockObject(BLACK_BRUSH);
 	wc.lpszMenuName  = 0;
 	wc.lpszClassName = GAME_WINDOW_CLASSNAME;
