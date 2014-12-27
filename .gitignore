@@ -9,8 +9,14 @@
 *.pch
 *.res
 *.user
+*.sdf
+*.props
+*.txt
 
 *.py
 
 # Directories
 BinTemp/
+
+Code/CryEngine/
+Code/SDKs
