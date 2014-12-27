@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Startup Files">
+      <UniqueIdentifier>{3cbf160f-3dbb-4162-af0d-e8159f9778ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{de414a49-1540-4c52-a90f-bbb6c2d13957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor Files">
+      <UniqueIdentifier>{4dd2024a-45fa-4dca-9e1d-8b545f738ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files">
+      <UniqueIdentifier>{574a7f99-de83-4932-bedd-832106cf565b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\GameRules">
+      <UniqueIdentifier>{cac6e1d2-4b92-4e8c-b687-f82b3de968a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Entities">
+      <UniqueIdentifier>{e39f4934-9eaa-43d1-94eb-d63fe10d8e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Entities\Helpers">
+      <UniqueIdentifier>{4a022ead-5d8d-4d2a-bd5a-4561eec2ac6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\EditorGame">
+      <UniqueIdentifier>{f10991c2-3a38-4825-bea0-f6bdaa2ca043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HUD">
+      <UniqueIdentifier>{5767321d-d649-4687-a59d-f9dd8432aef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{f3cd33eb-ca41-4949-93b7-0d687a6f0f1c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameDll.cpp">
+      <Filter>Startup Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStartup.cpp">
+      <Filter>Startup Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorGame.cpp">
+      <Filter>Game Files\EditorGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCVars.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRules.cpp">
+      <Filter>Game Files\GameRules</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="Utility\CryHash.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Actor Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerComponents.cpp">
+      <Filter>Actor Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityClassEx.cpp">
+      <Filter>Game Files\Entities\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="NativeEntity.cpp">
+      <Filter>Game Files\Entities\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.h" />
+    <ClCompile Include="GamePhysicsSettings.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD\UIManager.cpp">
+      <Filter>HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\AutoEnum.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\StringUtils.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameStartup.h">
+      <Filter>Startup Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorGame.h">
+      <Filter>Game Files\EditorGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCVars.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFactory.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRules.h">
+      <Filter>Game Files\GameRules</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\CryHash.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Actor Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerComponents.h">
+      <Filter>Actor Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityClassEx.h">
+      <Filter>Game Files\Entities\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeEntity.h">
+      <Filter>Game Files\Entities\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStringUtils.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePhysicsSettings.h">
+      <Filter>Game Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBroadcasterHelper.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\UIManager.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD\IUIGameEventSystem.h">
+      <Filter>HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\AutoEnum.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\StringUtils.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameDll.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Icon.ico">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cursor.cur">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+# Files
+*.dll
+*.pdb
+*.lastbuildstate
+*.log
+*.obj
+*.tlog
+*.exp
+*.pch
+*.res
+*.user
+
+*.py
+
+# Directories
+BinTemp/
